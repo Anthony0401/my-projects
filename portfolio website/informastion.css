@@ -1,0 +1,608 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+
+}
+/* html{
+    font-size: 10px;
+    font-family:monospace;
+    scroll-behavior: smooth;
+    scroll
+} */
+html {
+    font-size: 10px;
+    font-family:monospace;
+    scroll-behavior: smooth;
+    overflow: scroll;
+    overflow-x: hidden;
+    }
+    ::-webkit-scrollbar {
+    width: 0px; /* remove scrollbar space /
+    background: transparent; / optional: just make scrollbar invisible /
+    }
+    / optional: show position indicator in red */
+    }
+    :-webkit-scrollbar-thumb {
+    background: #FF0000;
+    }
+a{
+    text-decoration:none;
+
+}
+p{
+    font-size: 1.4rem;
+    margin-top: 5px;
+    line-height: 2.5rem;
+    font-weight: 300px;
+    letter-spacing: .05rem;   
+
+}
+
+img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+/* End service section */
+
+/* Hero section */
+/* background */
+#hero{
+    background-image: url(./Bilder/plantbackground.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+
+}
+/* backgorund position */
+#hero::after{
+    position:absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: .7; 
+    z-index: -1;
+}
+
+#hero .container{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+#hero .hero {
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
+    justify-content:flex-start;
+}
+/* tekst */
+#hero h1{
+    display: block;
+    width: fit-content;
+    font-size: 4rem;
+    font-style: bold;
+    position: relative;
+    color: transparent;
+    animation: text-reveal .5s ease forwards;
+    animation-delay: 1s;
+
+}
+#hero h1:nth-child(1){
+    animation-delay: 1s;
+}
+#hero h1:nth-child(2){
+    animation-delay: 2s;
+}
+
+#hero h1:nth-child(3){
+    animation: text-reveal-name .5 ease forwards;
+    animation-delay: 3s;
+}
+
+/* animastion */
+#hero h1 span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: crimson;
+    animation: text-reveal-box 1s ease;
+    animation-delay: 1s;
+}
+#hero h1:nth-child(1) span{
+    animation-delay: .5s;
+}
+#hero h1:nth-child(2) span{
+    animation-delay: 1.5s;
+}
+#hero h1:nth-child(3) span{
+    animation-delay: 2.5s;
+}
+/* button style */
+#hero .cta{
+    display: inline-block;
+    padding: 10px 30px;
+    color: rgb(234, 229, 230);
+    background-color: transparent;
+    border: 2px solid crimson;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-top: 30px;
+    transition: .3s ease;
+    transition-property: background-color, color;
+}
+#hero .cta:hover{
+    color: white;
+    background-color: red;
+}
+/* End hero section */
+
+/* About me */
+#me .me{
+    background-image: url(./Bilder/mebackground.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: top center;
+    max-width: 1700px;
+    max-height: 900px;
+
+}
+#me .Vietnam {
+    color: grey;
+
+}
+#me .container{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: top left;
+    
+}
+#me .aboutme-title{
+    font-size: 4rem;
+    font-weight: 300;
+    color: white;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    font-style: bold;
+}
+#me h1{
+    position: absolute; right: -500px; bottom: -250px;
+    display: block;
+    width: fit-content;
+    font-size: 4rem;
+    font-style: bold;
+    position: relative;
+    color: white;
+}
+#me .link{
+    padding: 10px 40px;
+    position: absolute;right: 300px;
+    border: 0;
+    color: rgb(234, 229, 230);
+    background-color: transparent;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-top: 30px;
+}
+#me .link:hover{
+    cursor: pointer;
+    color: aqua;
+}
+#me .link2{
+    padding: 10px 40px;
+    position: absolute;right: 492px;
+    border: 0;
+    color: rgb(234, 229, 230);
+    background-color: transparent;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-top: 30px;
+}
+#me .link2:hover{
+    cursor: pointer;
+    color: aqua;
+}
+#me .link3{
+    padding: 10px 40px;
+    position: absolute;right: 100px;
+    border: 0;
+    color: rgb(234, 229, 230);
+    background-color: transparent;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-top: 30px;
+}
+#me .link3:hover{
+    cursor: pointer;
+    color: aqua;
+}
+
+#me .aboutme-title{
+    position: absolute; right: 1140px;top: 830px;
+}
+#me .aboutme-top p{
+    position: absolute; bottom: -570px; right: 640px;
+    color: white;
+}
+#me .me-middle{
+    justify-content: center left;
+}
+#me .pfp{
+    position: absolute; left:0px; bottom: -762px;
+
+}
+/* End About me */
+
+/* Projects */
+#projects .container{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+#projects .projects{
+    background-color: rgb(100, 108, 109);
+    flex-direction: column;
+    background-size: cover;
+    background-repeat:0;
+    margin: 0 auto;
+    padding: 100px 0;
+    opacity: 9.2;
+}
+#projects .project-header h1{
+    margin-bottom: 50px;
+
+}
+#projects .all-projects{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 0;
+
+}
+#projects .project-items{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    
+}
+#projects .project-info{
+    padding:30px;
+    flex-basis: 50%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    background-image: linear-gradient(60deg, #29323c 0% , #485563 100%);
+    color: white;
+
+}
+
+#projects .project-info h1{
+    font-size : 4rem;
+    font-weight: 500;
+
+}
+
+#projects .project-info h2{
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-top: 10px;
+}
+#projects .project-img {
+    background-size: cover;
+    flex-basis: 50%;
+    height:0px;
+    overflow: hidden;
+    position: relative;
+}
+
+#projects .project-img::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: .3;
+}
+#projects .project-img img{
+    transition: .3s ease transform;
+}
+
+#projects .project-items:hover .project-img img{
+    transform: scale(1.1); 
+
+}
+
+#projects .project-title{
+    font-size: 7rem;
+    font-weight: 300;
+    font-style: bold;
+    color: white;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+
+}
+#projects .sub-title{
+    font-size: 3rem;
+    font-weight: 300;
+    font-style: bold;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+
+}
+
+
+/* End Project */
+
+/* Service section */
+#services .container{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#services .services{
+    flex-direction: column;
+    text-align: center;
+
+    margin: 0 auto;
+    padding: 100px 0 ;
+    background-image: url(./Bilder/graybackgorund.png);
+    background-size: cover;
+    background-repeat: 0;
+    position: relative;
+    background-position: top center;
+
+}
+
+#services .section-title{
+    font-size: 4rem;
+    font-weight: 300;
+    color: black;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+
+}
+/* remove later
+#services .section-title span {
+    color: crimson; 
+} */
+
+#services .service-top p{
+    font-size: 1.4rem;
+    margin-top: 5px;
+    line-height: 2.5rem;
+    font-weight: 300px;
+    letter-spacing: .05rem;   
+}
+/* spacing */
+#services .service-bottom{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+#services .service-item{
+    flex-basis: 80%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 10px;
+    background-image: url(./Bilder/lukas-blazek-EWDvHNNfUmQ-unsplash.jpg);
+    background-size: cover;
+    margin: 10px 5%;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+#services .service-item::after{
+    content: "";
+    position:absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color:#7a7696;
+    z-index: -1;
+
+}
+/* Position and style of icon, text */
+
+#services .service-bottom .icon{
+    height: 50px;
+    width: 50px;
+    margin-bottom: 20px;
+}
+#services .service-item h2{
+    font-size: 2rem;
+    color: black;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+#services .service-item p{
+    color: black;
+    text-align: left;
+}
+
+/* #services .service-item p{
+    font-size: 2rem;
+    color: white;
+    font-size: 1.4rem;
+    line-height: 1.9rem ;
+} */
+/* End service section */
+
+/* Contact */
+#contact .contact{
+    background-color: black;
+    max-height: 900px;
+}
+
+#contact .subtitle{
+    font-size: 3rem;
+    font-weight: 300;
+    color: white;
+    margin-bottom: 30px;
+    margin-right: 30px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+
+}
+
+#contact .contact-left{
+    flex-basis: 35%;
+}
+#contact .contact-right{
+    flex-basis: 60%;
+}
+#contact .contact-left p{
+    color: white;
+    margin-bottom: 5px;
+}
+#contact .contact-left p i{
+    color: #ff004f;
+    font-size: 25px;
+    margin-left: 20px;
+
+}
+
+#contact .social-icons {
+    text-decoration:none;
+    font-size: 30px;
+    margin-right: 15px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    display: inline-block;
+    transition:transform 0.5s;
+
+}
+#contact .social-icons a:hover{
+    color: #ff004f;
+    transform: translateY(-5px);
+} 
+
+#contact .btn.btn2{
+    display: inline-block;
+    background: #ff004f;
+    padding: 10px 40px;
+    color: white;
+    background-color: crimson;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-top: 30px;
+    border-radius: 10px;
+    border: none;
+}
+
+#contact .contact-right form{
+    width: 100%;
+
+}
+form input, form textarea{
+    width: 1000px;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+    display: flex;
+}
+/* End contact */
+
+/* #contact .container{
+    min-height: 50vh;
+    width: 100%;
+    display: flex;
+    justify-content: left;
+
+}
+
+#contact .contact{
+    background-color: #181824;
+    opacity: .9;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: top center;
+
+
+}
+
+#contact .contact-title{
+    font-size: 3rem;
+    font-weight: 300;
+    color: white;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    justify-content: center;
+} */
+/* keyframes animastion*/
+@keyframes text-reveal-box{
+    50%{
+        width: 100%;
+        left: 0%;
+    }
+    100%{
+        width: 0;
+        left: 100%;
+    }
+}
+/* animastion 2 */
+@keyframes text-reveal{
+    100%{
+        color:white;
+    }
+    
+}
+/* Name color */
+@keyframes text-reveal-name{
+    100%{
+        color: rgb(104, 115, 187);
+    }
+    
+}
+/* End keyframes */
